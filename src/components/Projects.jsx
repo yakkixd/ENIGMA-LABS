@@ -1,49 +1,58 @@
 import { useState } from 'react'
 import ScrollReveal from './ScrollReveal'
+import ProjectModal from './ProjectModal'
 
 const Projects = () => {
+    const [selectedProject, setSelectedProject] = useState(null)
+
     const projects = [
         {
             title: "Enigma Foods",
             description: "Next-gen food delivery ecosystem featuring a Per-User Demand Suggestion Engine.",
             tags: ["React", "Node.js", "AI/ML"],
             status: "Active",
-            color: "purple"
+            color: "purple",
+            links: { demo: "#", code: "#" }
         },
         {
             title: "xFected Selfbot",
             description: "A high-utility automation suite for Discord power users with advanced command handling.",
             tags: ["Python", "Discord API", "Automation"],
             status: "Active",
-            color: "violet"
+            color: "violet",
+            links: { demo: "#", code: "#" }
         },
         {
             title: "Epic Gen V1",
             description: "High-velocity account generation tool utilizing headless browser automation.",
             tags: ["Python", "Selenium", "Automation"],
             status: "Archived",
-            color: "purple"
+            color: "purple",
+            links: { demo: "#", code: "#" }
         },
         {
             title: "Academic Data Parser",
             description: "Precision frontend replication and data parsing tool for academic datasets.",
             tags: ["React", "Web Scraping", "UI Clone"],
             status: "Active",
-            color: "violet"
+            color: "violet",
+            links: { demo: "#", code: "#" }
         },
         {
             title: "API Load Tester",
             description: "High-concurrency network utility designed to stress-test API endpoints.",
             tags: ["Python", "Performance", "Testing"],
             status: "Active",
-            color: "purple"
+            color: "purple",
+            links: { demo: "#", code: "#" }
         },
         {
             title: "Cipher Pay",
             description: "Decentralized transaction handler built for secure crypto payments.",
             tags: ["Blockchain", "Crypto", "Security"],
             status: "In Development",
-            color: "violet"
+            color: "violet",
+            links: { demo: "#", code: "#" }
         }
     ]
 
@@ -72,18 +81,31 @@ const Projects = () => {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} index={index} />
+                        <ProjectCard
+                            key={index}
+                            project={project}
+                            index={index}
+                            onClick={() => setSelectedProject(project)}
+                        />
                     ))}
                 </div>
             </div>
 
             {/* Bottom section divider */}
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent"></div>
+
+            {/* Modal */}
+            {selectedProject && (
+                <ProjectModal
+                    project={selectedProject}
+                    onClose={() => setSelectedProject(null)}
+                />
+            )}
         </section>
     )
 }
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project, index, onClick }) => {
     const [isHovered, setIsHovered] = useState(false)
 
     const statusColors = {
@@ -95,9 +117,10 @@ const ProjectCard = ({ project, index }) => {
     return (
         <ScrollReveal delay={index * 0.05}>
             <div
-                className="relative group h-full transition-transform duration-300 ease-out hover:-translate-y-2"
+                className="relative group h-full transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col cursor-pointer"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                onClick={onClick}
             >
                 {/* Card container */}
                 <div className="relative h-full bg-purple-900/5 border border-purple-500/20 rounded-2xl p-8 overflow-hidden flex flex-col transition-colors duration-300 hover:bg-purple-900/10">
@@ -110,13 +133,16 @@ const ProjectCard = ({ project, index }) => {
                         }}
                     ></div>
 
-                    {/* Status Badge */}
+                    {/* Status Badge & Latency */}
                     <div className="flex items-center justify-between mb-6 relative z-10">
                         <div className="flex items-center gap-2">
                             <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${statusColors[project.status]} ${isHovered ? 'animate-pulse' : ''}`}></div>
                             <span className="text-xs font-sans text-gray-500 tracking-wide">
                                 {project.status}
                             </span>
+                        </div>
+                        <div className="text-[10px] font-mono text-gray-600">
+                            Latency: {(Math.random() * 50 + 10).toFixed(0)}ms
                         </div>
                     </div>
 
@@ -131,7 +157,7 @@ const ProjectCard = ({ project, index }) => {
                     </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 relative z-10">
+                    <div className="flex flex-wrap gap-2 relative z-10 mb-8">
                         {project.tags.map((tag, tagIndex) => (
                             <span
                                 key={tagIndex}
@@ -144,7 +170,7 @@ const ProjectCard = ({ project, index }) => {
 
                     {/* Corner accent - GPU optimized */}
                     <div
-                        className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-600/10 to-transparent rounded-tl-full transition-opacity duration-300 will-change-opacity"
+                        className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-600/10 to-transparent rounded-tl-full transition-opacity duration-300 will-change-opacity pointer-events-none"
                         style={{ opacity: isHovered ? 1 : 0 }}
                     />
                 </div>

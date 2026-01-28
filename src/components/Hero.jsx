@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 const Hero = () => {
     return (
         <section id="hero" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-20">
+            {/* Noise Overlay */}
+            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"></div>
+
             {/* Optimized Gradient Orbs - Using radial-gradient instead of heavy blur filters */}
             <motion.div
                 className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full"

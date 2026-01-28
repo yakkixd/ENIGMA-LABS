@@ -12,17 +12,17 @@ const Snowflakes = () => {
     }))
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden" aria-hidden="true">
+        <div className="fixed inset-0 pointer-events-none z-[100] overflow-hidden" aria-hidden="true">
             {snowflakes.map((flake) => (
                 <div
                     key={flake.id}
-                    className="absolute bg-white rounded-full"
+                    className="absolute bg-white rounded-full mix-blend-screen"
                     style={{
                         left: flake.left,
                         top: '-10px',
                         width: flake.size,
                         height: flake.size,
-                        opacity: flake.opacity,
+                        opacity: flake.opacity * 1.5, // Boost opacity
                         animation: `snowfall ${flake.animationDuration} linear infinite`,
                         animationDelay: flake.animationDelay,
                         willChange: 'transform'
@@ -31,8 +31,8 @@ const Snowflakes = () => {
             ))}
             <style>{`
                 @keyframes snowfall {
-                    0% { transform: translateY(-10px); }
-                    100% { transform: translateY(100vh); }
+                    0% { transform: translate3d(0, -10px, 0); }
+                    100% { transform: translate3d(0, 100vh, 0); }
                 }
             `}</style>
         </div>

@@ -13,17 +13,18 @@ const Navbar = () => {
     }, [])
 
     const navLinks = [
-        { name: 'Lab Notes', href: '#lab-notes' },
+        { name: 'Vision', href: '#manifesto' },
+        { name: 'Credentials', href: '#credentials' },
         { name: 'Armory', href: '#armory' },
         { name: 'Archives', href: '#work' },
-        { name: 'Initialize', href: '#terminal' }
+        { name: 'Contact', href: '#terminal' }
     ]
 
     return (
         <motion.nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-                    ? 'bg-black/80 backdrop-blur-xl border-b border-purple-500/20 shadow-lg shadow-purple-500/10'
-                    : 'bg-transparent'
+                ? 'bg-black/80 backdrop-blur-xl border-b border-purple-500/20 shadow-lg shadow-purple-500/10'
+                : 'bg-transparent'
                 }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -77,7 +78,7 @@ const Navbar = () => {
 
                     {/* CTA Button */}
                     <motion.a
-                        href="#terminal"
+                        href="#contact"
                         className="hidden md:block relative px-6 py-2.5 bg-gradient-to-r from-purple-600 to-violet-600 text-white text-sm font-semibold rounded-lg overflow-hidden group"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}

@@ -15,10 +15,9 @@ const About = () => {
                 <ScrollReveal>
                     <div className="max-w-4xl mx-auto text-center mb-24">
                         <span className="text-purple-400 font-mono text-sm tracking-widest uppercase mb-4 block">// The Manifesto</span>
-                        <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-tight">
-                            WE DO NOT JUST CODE.<br />
-                            <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-                                WE ENGINEER EXPERIENCES.
+                        <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
+                            <span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                                LAB NOTES
                             </span>
                         </h2>
                     </div>

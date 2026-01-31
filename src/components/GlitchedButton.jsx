@@ -38,7 +38,7 @@ const GlitchedButton = ({ text, href, onClick, variant = 'primary', className = 
         setDisplayText(text);
     };
 
-    const baseStyles = "relative px-8 py-3.5 font-mono text-sm font-bold tracking-wider uppercase overflow-hidden transition-all duration-300 group";
+    const baseStyles = "relative px-8 py-4 font-mono text-sm font-bold tracking-wider uppercase overflow-hidden transition-all duration-300 group";
 
     // Tailwind classes for variants
     const variants = {

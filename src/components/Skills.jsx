@@ -54,7 +54,7 @@ const Skills = () => {
                         <div className="inline-block mb-4 transform hover:scale-105 transition-transform duration-300">
                             <span className="text-purple-400 font-sans text-sm tracking-widest uppercase">// Tech Stack</span>
                         </div>
-                        <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
+                        <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
                             <span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
                                 THE ARMORY
                             </span>

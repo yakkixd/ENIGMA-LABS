@@ -54,7 +54,7 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.h1
-                    className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter leading-none"
+                    className="text-5xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter leading-none"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 }}
@@ -74,14 +74,14 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                    <p className="text-2xl md:text-4xl font-light text-gray-300 mb-2 tracking-wide font-sans">
+                    <p className="text-xl md:text-4xl font-light text-gray-300 mb-2 tracking-wide font-sans">
                         ENGINEERING THE UNSEEN
                     </p>
-                    <div className="h-px w-64 mx-auto bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+                    <div className="h-px w-48 md:w-64 mx-auto bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
                 </motion.div>
 
                 <motion.p
-                    className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed font-sans"
+                    className="text-sm md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed font-sans px-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 1 }}
@@ -90,7 +90,7 @@ const Hero = () => {
                 </motion.p>
 
                 <motion.div
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                    className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto px-6 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.2 }}

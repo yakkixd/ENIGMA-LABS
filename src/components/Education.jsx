@@ -11,7 +11,7 @@ const Education = () => {
                 <ScrollReveal>
                     <div className="mb-20 text-center">
                         <span className="text-purple-400 font-mono text-sm tracking-widest uppercase">// Academic Profile</span>
-                        <h2 className="text-5xl md:text-6xl font-black mt-4 tracking-tight">
+                        <h2 className="text-4xl md:text-6xl font-black mt-4 tracking-tight">
                             <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                                 EDUCATION
                             </span>

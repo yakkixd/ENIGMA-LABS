@@ -67,7 +67,7 @@ const Projects = () => {
                         <div className="inline-block mb-4 transition-transform hover:scale-105 duration-300">
                             <span className="text-purple-400 font-sans text-sm tracking-widest uppercase">// Portfolio</span>
                         </div>
-                        <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
+                        <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
                             <span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
                                 ARCHIVES
                             </span>

@@ -15,7 +15,7 @@ const Footer = () => {
     const footerLinks = [
         { name: 'Privacy', href: '#' },
         { name: 'Terms', href: '#' },
-        { name: 'GitHub', href: 'https://github.com' }
+        { name: 'GitHub', href: 'https://github.com/yakkixd' }
     ]
 
     // Use pure CSS hover

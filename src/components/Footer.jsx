@@ -34,10 +34,13 @@ const Footer = () => {
                         <div>
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="relative">
-                                    <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-violet-600 rounded-lg flex items-center justify-center">
-                                        <span className="text-white font-black text-2xl">E</span>
+                                    <div className="w-12 h-12 rounded-full overflow-hidden border border-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+                                        <img
+                                            src="/logo.gif"
+                                            alt="Enigma Labs Logo"
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
-                                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-violet-600 rounded-lg opacity-50" style={{ filter: 'none' }}></div>
                                 </div>
                                 <h3 className="text-2xl font-black tracking-tight text-white">
                                     ENIGMA LABS

@@ -7,52 +7,52 @@ const Projects = () => {
 
     const projects = [
         {
+            title: "UrbanSight AI",
+            description: "AI-powered urban analysis tool for detecting sprawl using satellite imagery and deep learning models.",
+            tags: ["Python", "TensorFlow", "React"],
+            status: "Active",
+            color: "purple",
+            links: { demo: "/coming-soon", code: "/coming-soon" }
+        },
+        {
+            title: "ReelzVault",
+            description: "A lightweight reel downloader that lets you quickly download YouTube videos & Shorts and Instagram Reels in high quality. Built for speed, simplicity, and everyday use — no clutter, just paste the link and download.",
+            tags: ["Python", "YT-DLP", "GUI"],
+            status: "Active",
+            color: "violet",
+            links: { demo: "/coming-soon", code: "/coming-soon" }
+        },
+        {
             title: "Enigma Foods",
             description: "Next-gen food delivery ecosystem featuring a Per-User Demand Suggestion Engine.",
             tags: ["React", "Node.js", "AI/ML"],
-            status: "Active",
+            status: "In Development",
             color: "purple",
-            links: { demo: "#", code: "#" }
+            links: { demo: "/coming-soon", code: "/coming-soon" }
         },
         {
-            title: "xFected Selfbot",
-            description: "A high-utility automation suite for Discord power users with advanced command handling.",
-            tags: ["Python", "Discord API", "Automation"],
-            status: "Active",
+            title: "Cipher Pay",
+            description: "Decentralized transaction handler built for secure crypto payments and wallet integration.",
+            tags: ["Blockchain", "Crypto", "Security"],
+            status: "In Development",
             color: "violet",
-            links: { demo: "#", code: "#" }
-        },
-        {
-            title: "Epic Gen V1",
-            description: "High-velocity account generation tool utilizing headless browser automation.",
-            tags: ["Python", "Selenium", "Automation"],
-            status: "Archived",
-            color: "purple",
-            links: { demo: "#", code: "#" }
+            links: { demo: "/coming-soon", code: "/coming-soon" }
         },
         {
             title: "Academic Data Parser",
             description: "Precision frontend replication and data parsing tool for academic datasets.",
             tags: ["React", "Web Scraping", "UI Clone"],
-            status: "Active",
-            color: "violet",
-            links: { demo: "#", code: "#" }
+            status: "Archived",
+            color: "purple",
+            links: { demo: "/coming-soon", code: "/coming-soon" }
         },
         {
             title: "API Load Tester",
             description: "High-concurrency network utility designed to stress-test API endpoints.",
             tags: ["Python", "Performance", "Testing"],
             status: "Active",
-            color: "purple",
-            links: { demo: "#", code: "#" }
-        },
-        {
-            title: "Cipher Pay",
-            description: "Decentralized transaction handler built for secure crypto payments.",
-            tags: ["Blockchain", "Crypto", "Security"],
-            status: "In Development",
             color: "violet",
-            links: { demo: "#", code: "#" }
+            links: { demo: "/coming-soon", code: "/coming-soon" }
         }
     ]
 

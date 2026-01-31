@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import GlitchedButton from './GlitchedButton'
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
@@ -42,10 +43,14 @@ const Navbar = () => {
                         <div className="flex items-center gap-3">
                             {/* Logo Icon */}
                             <div className="relative">
-                                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-violet-600 rounded-lg flex items-center justify-center">
-                                    <span className="text-white font-black text-xl">E</span>
+                                <div className="w-10 h-10 rounded-full overflow-hidden border border-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+                                    <img
+                                        src="/logo.gif"
+                                        alt="Enigma Labs Logo"
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
-                                <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-violet-600 rounded-lg blur-md opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 rounded-full border border-purple-500/20 blur-[2px]"></div>
                             </div>
 
                             {/* Brand Name */}
@@ -77,19 +82,15 @@ const Navbar = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <motion.a
-                        href="#contact"
-                        className="hidden md:block relative px-6 py-2.5 bg-gradient-to-r from-purple-600 to-violet-600 text-white text-sm font-semibold rounded-lg overflow-hidden group"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.6 }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <span className="relative z-10">Get In Touch</span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </motion.a>
+                    {/* CTA Button */}
+                    <div className="hidden md:block">
+                        <GlitchedButton
+                            text="Get In Touch"
+                            href="#contact"
+                            variant="primary"
+                            className="!px-6 !py-2.5 text-xs"
+                        />
+                    </div>
 
                     {/* Mobile Menu Button */}
                     <motion.button

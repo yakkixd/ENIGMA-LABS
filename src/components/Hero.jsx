@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import GlitchedButton from './GlitchedButton'
 
 const Hero = () => {
     return (
@@ -94,23 +95,16 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.2 }}
                 >
-                    <motion.a
+                    <GlitchedButton
+                        text="View Projects"
                         href="#work"
-                        className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold rounded-lg overflow-hidden"
-                        whileHover={{ scale: 1.02 }} // Reduced scale for performance
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        <span className="relative z-10">View Projects</span>
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </motion.a>
-                    <motion.a
+                        variant="white"
+                    />
+                    <GlitchedButton
+                        text="Initialize Contact"
                         href="#contact"
-                        className="group relative px-8 py-4 border-2 border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        Initialize Contact
-                    </motion.a>
+                        variant="outline"
+                    />
                 </motion.div>
 
                 {/* Animated scroll indicator */}

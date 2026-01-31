@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaTimes, FaGithub, FaExternalLinkAlt, FaTerminal } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const ProjectModal = ({ project, onClose }) => {
     // Close on escape key
@@ -86,22 +87,18 @@ const ProjectModal = ({ project, onClose }) => {
 
                         {/* Action Buttons */}
                         <div className="flex gap-4">
-                            <a
-                                href={project.links?.demo || "#"}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link
+                                to={project.links?.demo || "#"}
                                 className="flex-1 flex items-center justify-center gap-2 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-lg font-bold text-sm transition-all hover:scale-[1.02]"
                             >
                                 <FaExternalLinkAlt /> LIVE DEMO
-                            </a>
-                            <a
-                                href={project.links?.code || "#"}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            </Link>
+                            <Link
+                                to={project.links?.code || "#"}
                                 className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-lg font-bold text-sm transition-all"
                             >
                                 <FaGithub /> SOURCE CODE
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>

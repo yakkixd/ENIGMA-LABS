@@ -1,29 +1,29 @@
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About' // Lab Protocols
-import Education from './components/Education'
-import Skills from './components/Skills'
-import Projects from './components/Projects' // Archives
-import Contact from './components/Contact'
+import Home from './components/Home'
 import Footer from './components/Footer'
 import AnimatedBackground from './components/AnimatedBackground'
 import Snowflakes from './components/Snowflakes'
+import ComingSoon from './pages/ComingSoon'
+import NotFound from './pages/NotFound'
 
 function App() {
     return (
         <div className="min-h-screen bg-black text-white selection:bg-purple-500/30">
             <Snowflakes />
             <AnimatedBackground />
-            <Navbar />
-            <main className="relative z-10 flex flex-col gap-0">
-                <Hero />
-                <About />
-                <Education />
-                <Skills />
-                <Projects />
-                <Contact />
-            </main>
-            <Footer />
+
+            <Routes>
+                <Route path="/" element={
+                    <>
+                        <Navbar />
+                        <Home />
+                        <Footer />
+                    </>
+                } />
+                <Route path="/coming-soon" element={<ComingSoon />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </div>
     )
 }

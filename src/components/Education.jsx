@@ -28,7 +28,7 @@ const Education = () => {
                         <div className="relative bg-black border border-white/10 rounded-2xl p-8 md:p-12 overflow-hidden">
                             {/* Decorative background numbers */}
                             <div className="absolute top-4 right-6 font-mono text-xs text-purple-500/20 hidden md:block">
-                                ID: STU-2022-2026<br />
+                                ID: STU-2025-2029<br />
                                 STATUS: ACTIVE
                             </div>
 
@@ -39,20 +39,20 @@ const Education = () => {
                                         <FaUniversity className="w-8 h-8" />
                                     </div>
                                     <h3 className="text-3xl font-bold text-white mb-2">Bachelor of Technology</h3>
-                                    <p className="text-xl text-purple-400 font-mono mb-6">Computer Science & Engineering</p>
+                                    <p className="text-xl text-purple-400 font-mono mb-6">Computer Science & Engineering AI/ML</p>
 
                                     <div className="space-y-4 text-gray-400 font-sans mb-8">
                                         <p className="flex items-center gap-3">
                                             <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
-                                            <span className="text-white">Institute of Technology</span>
+                                            <span className="text-white">K.R. Mangalam University</span>
                                         </p>
                                         <p className="flex items-center gap-3">
                                             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                                            Currently Pursuing (3rd Year)
+                                            Currently Pursuing (1st Year)
                                         </p>
                                         <p className="flex items-center gap-3 text-sm text-gray-500">
                                             <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
-                                            2022 - 2026 (Expected)
+                                            2025 - 2029 (Expected)
                                         </p>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@ const Education = () => {
                                             <FaBook className="text-purple-400 text-xl" />
                                             <div>
                                                 <h5 className="text-white font-bold text-sm">Object Oriented Programming</h5>
-                                                <p className="text-xs text-gray-500 mt-1">Java, C++, Design Patterns</p>
+                                                <p className="text-xs text-gray-500 mt-1">Python, Design Patterns</p>
                                             </div>
                                         </div>
 

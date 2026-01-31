@@ -44,7 +44,7 @@ const About = () => {
                             <ul className="space-y-4 font-mono text-sm text-purple-200/80">
                                 <li className="flex items-center gap-3">
                                     <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                                    <span>Obsessive Performance Optimization</span>
+                                    <span>Scalable by Design</span>
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
@@ -52,11 +52,11 @@ const About = () => {
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                                    <span>Algorithmic Precision</span>
+                                    <span>Minimalism with Intent</span>
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                                    <span>Experimental Interfaces</span>
+                                    <span>Security as a Primitive</span>
                                 </li>
                             </ul>
                         </div>

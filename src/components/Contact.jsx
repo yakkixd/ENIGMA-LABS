@@ -53,7 +53,7 @@ const Contact = () => {
                             icon={<FaDiscord className="w-full h-full p-2" />}
                             label="DISCORD"
                             value="Add me on Discord"
-                            href=""
+                            href="https://discord.com/users/712273643169644625"
                         />
                     </ScrollReveal>
                 </div>

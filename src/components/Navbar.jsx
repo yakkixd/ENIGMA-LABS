@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import GlitchedButton from './GlitchedButton'
+import { FaDiscord, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
@@ -32,7 +32,7 @@ const Navbar = () => {
             transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
         >
             <div className="max-w-7xl mx-auto px-6 md:px-12">
-                <div className="flex items-center justify-between h-20">
+                <div className="relative flex items-center justify-between h-20">
                     {/* Brand */}
                     <motion.a
                         href="#hero"
@@ -63,8 +63,8 @@ const Navbar = () => {
                         </div>
                     </motion.a>
 
-                    {/* Navigation Links */}
-                    <div className="hidden md:flex items-center gap-8">
+                    {/* Navigation Links - Centered */}
+                    <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8">
                         {navLinks.map((link, index) => (
                             <motion.a
                                 key={index}
@@ -81,15 +81,34 @@ const Navbar = () => {
                         ))}
                     </div>
 
-                    {/* CTA Button */}
-                    {/* CTA Button */}
-                    <div className="hidden md:block">
-                        <GlitchedButton
-                            text="Get In Touch"
-                            href="#contact"
-                            variant="primary"
-                            className="!px-6 !py-2.5 text-xs"
-                        />
+
+
+                    {/* Social Icons */}
+                    <div className="hidden md:flex items-center gap-6 z-20">
+                        <a
+                            href="https://discord.com/users/712273643169644625"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-[#5865F2] transition-all duration-300 text-xl hover:scale-110"
+                        >
+                            <FaDiscord />
+                        </a>
+                        <a
+                            href="https://instagram.com/yakki.xd"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-[#E1306C] transition-all duration-300 text-xl hover:scale-110"
+                        >
+                            <FaInstagram />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/yaksh-kundu-839b03384/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-[#0077B5] transition-all duration-300 text-xl hover:scale-110"
+                        >
+                            <FaLinkedin />
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}

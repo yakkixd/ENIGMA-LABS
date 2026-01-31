@@ -14,10 +14,10 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Vision', href: '#manifesto' },
-        { name: 'Credentials', href: '#credentials' },
+        { name: 'Education', href: '#education' },
         { name: 'Armory', href: '#armory' },
         { name: 'Archives', href: '#work' },
-        { name: 'Contact', href: '#terminal' }
+        { name: 'Contact', href: '#contact' }
     ]
 
     return (

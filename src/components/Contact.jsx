@@ -4,7 +4,7 @@ import { FaEnvelope, FaGithub, FaDiscord, FaBolt } from 'react-icons/fa'
 
 const Contact = () => {
     return (
-        <section id="terminal" className="relative bg-black border-t border-purple-500/20">
+        <section id="contact" className="relative bg-black border-t border-purple-500/20">
             {/* Optimized Background - Radial Gradient */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(147, 51, 234, 0.05) 0%, transparent 70%)' }}></div>
 
@@ -32,8 +32,8 @@ const Contact = () => {
                         <ContactCard
                             icon={<FaEnvelope className="w-full h-full p-2" />}
                             label="EMAIL"
-                            value="contact@enigma-labs.dev"
-                            href="mailto:contact@enigma-labs.dev"
+                            value="yakkixd@enigma-labs.dev"
+                            href="mailto:yakkixd@enigma-labs.dev"
                         />
                     </ScrollReveal>
 
@@ -42,8 +42,8 @@ const Contact = () => {
                         <ContactCard
                             icon={<FaGithub className="w-full h-full p-2" />}
                             label="GITHUB"
-                            value="github.com/enigma-labs"
-                            href="https://github.com"
+                            value="github.com/yakkixd"
+                            href="https://github.com/yakkixd"
                         />
                     </ScrollReveal>
 
@@ -52,8 +52,8 @@ const Contact = () => {
                         <ContactCard
                             icon={<FaDiscord className="w-full h-full p-2" />}
                             label="DISCORD"
-                            value="Join our community"
-                            href="#"
+                            value="Add me on Discord"
+                            href=""
                         />
                     </ScrollReveal>
                 </div>

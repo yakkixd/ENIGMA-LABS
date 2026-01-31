@@ -104,7 +104,7 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </motion.a>
                     <motion.a
-                        href="#terminal"
+                        href="#contact"
                         className="group relative px-8 py-4 border-2 border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}

@@ -5,10 +5,11 @@ const Footer = () => {
     const currentYear = new Date().getFullYear()
 
     const links = [
-        { name: 'Lab Notes', href: '#lab-notes' },
+        { name: 'Vision', href: '#manifesto' },
+        { name: 'Education', href: '#education' },
         { name: 'Armory', href: '#armory' },
         { name: 'Archives', href: '#work' },
-        { name: 'Initialize', href: '#terminal' }
+        { name: 'Contact', href: '#contact' }
     ]
 
     const footerLinks = [

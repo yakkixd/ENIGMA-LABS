@@ -16,16 +16,25 @@ const ProjectModal = ({ project, onClose }) => {
 
     return (
         <AnimatePresence>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 z-[200] flex items-center justify-center p-4 backdrop-blur-sm bg-black/80"
-                onClick={onClose} // Close on backdrop click
-            >
-                <div
-                    className="relative w-full max-w-2xl bg-black border border-purple-500/30 rounded-2xl overflow-hidden shadow-2xl shadow-purple-900/20"
-                    onClick={(e) => e.stopPropagation()} // Prevent close on modal click
+            <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+                {/* Backdrop - Optimized: No blur on entry, just opacity */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 bg-black/90"
+                    onClick={onClose}
+                />
+
+                {/* Modal Content - Scale & Fade */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    className="relative w-full max-w-2xl bg-black border border-purple-500/30 rounded-2xl overflow-hidden shadow-2xl shadow-purple-900/20 z-10"
+                    onClick={(e) => e.stopPropagation()}
                 >
                     {/* Header Image / Gradient */}
                     <div className="h-32 bg-gradient-to-r from-purple-900/40 to-violet-900/40 relative overflow-hidden">
@@ -95,8 +104,8 @@ const ProjectModal = ({ project, onClose }) => {
                             </a>
                         </div>
                     </div>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
         </AnimatePresence>
     )
 }

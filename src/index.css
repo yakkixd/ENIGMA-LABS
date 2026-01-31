@@ -28,20 +28,24 @@
     }
 }
 
-/* Minimal scrollbar */
+/* Cyberpunk scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #000;
+    background: #050505;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #666;
-    border-radius: 4px;
+    background: #4c1d95;
+    /* Purple 900 */
+    border-radius: 3px;
+    transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #999;
+    background: #7c3aed;
+    /* Violet 600 */
 }

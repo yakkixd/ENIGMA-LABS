@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/assignment-1/:match*",
+            "destination": "https://web-dev-ii-alpha.vercel.app/:match*"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }

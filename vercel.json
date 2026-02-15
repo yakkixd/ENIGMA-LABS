@@ -1,4 +1,11 @@
 {
+    "redirects": [
+        {
+            "source": "/assignment-1",
+            "destination": "/assignment-1/",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/assignment-1",

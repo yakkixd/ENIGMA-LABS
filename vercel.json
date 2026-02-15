@@ -1,19 +1,14 @@
-{
-    "redirects": [
-        {
-            "source": "/assignment-1",
-            "destination": "/assignment-1/",
-            "permanent": true
-        }
-    ],
     "rewrites": [
         {
-            "source": "/assignment-1/:match*",
-            "destination": "https://web-dev-ii-alpha.vercel.app/:match*"
+            "source": "/assignment-1",
+            "destination": "https://web-dev-ii-alpha.vercel.app/"
+        },
+        {
+            "source": "/assignment-1/(.*)",
+            "destination": "https://web-dev-ii-alpha.vercel.app/$1"
         },
         {
             "source": "/(.*)",
             "destination": "/index.html"
         }
     ]
-}

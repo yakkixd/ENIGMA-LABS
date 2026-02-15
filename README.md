@@ -79,4 +79,4 @@ enigma-labs/
 ## 🔗 Links
 
 - Live Site: [enigma-labs.dev](https://enigma-labs.dev/)
-- GitHub: [github.com/enigma-labs](https://github.com/enigma-labs)
+- GitHub: [github.com/enigma-labs](https://github.com/yakkixd)

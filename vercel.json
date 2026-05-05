@@ -1,23 +1,31 @@
 {
-    "redirects": [
-        {
-            "source": "/assignment-1",
-            "destination": "/assignment-1/",
-            "permanent": true
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/assignment-1",
-            "destination": "https://web-dev-ii-alpha.vercel.app/"
-        },
-        {
-            "source": "/assignment-1/(.*)",
-            "destination": "https://web-dev-ii-alpha.vercel.app/$1"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "redirects": [
+    {
+      "source": "/assignment-1",
+      "destination": "/assignment-1/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/assignment-1",
+      "destination": "https://web-dev-ii-alpha.vercel.app/"
+    },
+    {
+      "source": "/assignment-1/(.*)",
+      "destination": "https://web-dev-ii-alpha.vercel.app/$1"
+    },
+    {
+      "source": "/gymmembership",
+      "destination": "https://gym-membership-seven.vercel.app/"
+    },
+    {
+      "source": "/gymmembership/(.*)",
+      "destination": "https://gym-membership-seven.vercel.app/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
